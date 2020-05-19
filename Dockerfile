@@ -2,6 +2,7 @@ FROM postgres:12.2-alpine AS postgres
 
 FROM stephaneklein/restic-backup-docker:1.2-0.9.4
 
+COPY --from=postgres /usr/local/bin/pg_dumpall /usr/local/bin/pg_dumpall
 COPY --from=postgres /usr/local/bin/pg_dump /usr/local/bin/pg_dump
 COPY --from=postgres /usr/local/lib/libpq.so.5 /usr/local/lib/libpq.so.5
 

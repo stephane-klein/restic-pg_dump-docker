@@ -43,7 +43,7 @@ e0b88d91  2020-05-17 21:49:08  f95050207680              /data
 $ restic -r s3:http://127.0.0.1:9000/bucket1 check
 ```
 
-Restore data to `data2/`:
+Restore data to `backup/`:
 
 ```
 $ restic -r s3:http://127.0.0.1:9000/bucket1 restore e0b88d91 --target ./backup/
