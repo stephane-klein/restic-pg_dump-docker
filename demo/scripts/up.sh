@@ -3,9 +3,8 @@ set -e
 
 cd "$(dirname "$0")/../"
 
-docker-compose up -d postgres
-./scripts/wait-service.sh postgres 5432
+docker compose up -d postgres minio --wait
 
 ./scripts/import-demo-to-postgresql.sh
 
-docker-compose up -d
+docker compose up -d
