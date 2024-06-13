@@ -86,4 +86,4 @@ Why this project use [`pg_back`](https://github.com/orgrim/pg_back/) instead `pg
 ## License
 
 Restic sftp docker is licensed under [BSD 2-Clause License](https://opensource.org/licenses/BSD-2-Clause). You can find the
-complete text in [`LIPGPASSWORD=password psql -U postgres -h 127.0.0.1 -p 5433CENSE`](LICENSE).
+complete text in [`LICENSE`](LICENSE).
