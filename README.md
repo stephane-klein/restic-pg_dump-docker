@@ -9,7 +9,7 @@ This Docker image is powered by:
 - [`Rclone`](https://rclone.org/) - Rclone is a command-line program to manage files on cloud storage.
 - [`supercronic`](https://github.com/aptible/supercronic) - Cron for containers.
 
-If you are looking for a Restic based Docker image to backup your files, you can check out the following project: https://github.com/Its-Alex/restic-ftp-docker
+If you are looking for a Restic based Docker image to backup your files, you can check out the following project: https://github.com/Its-Alex/restic-docker
 
 
 ## Getting started
