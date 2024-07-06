@@ -83,6 +83,16 @@ Why this project use [`pg_back`](https://github.com/orgrim/pg_back/) instead `pg
 
 > The goal of `pg_back` is to dump all or some databases with globals at once in the format you want, because a simple call to pg_dumpall only dumps databases in the plain SQL format.
 
+
+## How do I publish a version?
+
+When a project iteration is deemed stable, it is possible to tag this version by following these instructions:
+
+```sh
+$ git tag $(date +'%Y%m%d_%H%M')
+$ git push --tags
+```
+
 ## License
 
 Restic sftp docker is licensed under [BSD 2-Clause License](https://opensource.org/licenses/BSD-2-Clause). You can find the
