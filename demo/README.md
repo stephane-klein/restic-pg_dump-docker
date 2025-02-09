@@ -6,12 +6,12 @@ $ docker compose build # optional, only used for development activities
 $ ./scripts/up.sh
 ```
 
-Default backup cron configuration: `BACKUP_CRON="0 */6 * * *"`
+Default backup cron configuration: `BACKUP_CRON="0 3 * * *"`
 
 This is how to execute backup now:
 
 ```
-$ docker compose run --rm restic-pg-dump start-backup-now
+$ docker compose exec restic-pg-dump start-backup-now
 ```
 
 ## Restoration scenario

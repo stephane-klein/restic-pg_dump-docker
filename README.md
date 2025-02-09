@@ -54,7 +54,7 @@ restic-pg-dump:
   - `POSTGRES_DB`;
   - `POSTGRES_PORT` (default: `5432`).
 - `RESTIC_PASSWORD` to [encrypte your backup](https://restic.readthedocs.io/en/latest/faq.html#how-can-i-specify-encryption-passwords-automatically) (empty by default, i.e. no encrypted).
-- `RESTIC_DOCKER_BACKUP_CRON_SCHEDULE` (default `0 * * * *` hourly).
+- `BACKUP_CRON` (default `0 3 * * *` daily).
 - Configure [`restic forget`](https://restic.readthedocs.io/en/latest/060_forget.html#) (which allows removing old snapshots) with this variable environments:
   - `RESTIC_KEEP_HOURLY` (default: `24`);
   - `RESTIC_KEEP_DAILY` (default: `7`);

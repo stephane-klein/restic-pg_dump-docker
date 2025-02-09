@@ -48,6 +48,7 @@ ENV POSTGRES_PASSWORD=password
 ENV POSTGRES_HOST=postgres
 ENV POSTGRES_DB=postgres
 
-ENV BACKUP_CRON="0 */6 * * *"
+# Daily
+ENV BACKUP_CRON="0 3 * * *"
 
 ENTRYPOINT [ "/opt/restic/entrypoint.sh" ]
