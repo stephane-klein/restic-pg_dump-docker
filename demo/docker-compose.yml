@@ -22,7 +22,7 @@ services:
         ports:
             - "5432:5432"
         volumes:
-            - ./volumes/postgres/:/var/lib/postgresql/data/
+            - postgres:/var/lib/postgresql/data/
         healthcheck:
             test: ["CMD", "sh", "-c", "pg_isready -U $$POSTGRES_USER -h $$(hostname -i)"]
             interval: 10s
@@ -37,7 +37,7 @@ services:
         ports:
             - "5433:5432"
         volumes:
-            - ./volumes/postgres-test-restore/:/var/lib/postgresql/data/
+            - postgres_restore_test:/var/lib/postgresql/data/
         healthcheck:
             test: ["CMD", "sh", "-c", "pg_isready -U $$POSTGRES_USER -h $$(hostname -i)"]
             interval: 10s
@@ -52,7 +52,7 @@ services:
             - "9000:9000"
             - "9001:9001"
         volumes:
-            - ./volumes/minio/:/data
+            - minio:/data
         command: server /data --console-address ":9001"
         healthcheck:
           test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
@@ -60,3 +60,11 @@ services:
           timeout: 10s
           retries: 3
           start_period: 10s
+
+volumes:
+  postgres:
+     name: ${COMPOSE_PROJECT_NAME}_postgres
+  postgres_restore_test:
+     name: ${COMPOSE_PROJECT_NAME}_postgres_restore_test
+  minio:
+     name: ${COMPOSE_PROJECT_NAME}_minio

@@ -1,6 +1,7 @@
 # How to use stephaneklein/restic-pg_dump Docker Image
 
 ```
+$ source .envrc
 $ docker compose build # optional, only used for development activities
 $ ./scripts/up.sh
 ```
@@ -23,7 +24,7 @@ Read the ["Installation" section](https://restic.readthedocs.io/en/stable/020_in
 Load secret environment variables:
 
 ```
-$ source source.env
+$ source .envrc
 ```
 
 Here's how to display the snapshot list:
@@ -115,3 +116,9 @@ postgres=# select * from contacts limit 2;
 
 ```
 
+
+## Teardown
+
+```sh
+$ docker compose down -v
+```
