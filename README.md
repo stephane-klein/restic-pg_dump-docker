@@ -1,5 +1,8 @@
 # Docker Image to backup PostgreSQL database with Restic
 
+**This project is deprecated, I recommend using [pg_back](https://github.com/orgrim/pg_back/) and [`pg_back-docker-sidecar`](https://github.com/stephane-klein/pg_back-docker-sidecar).**
+
+
 You can use this Docker image `stephaneklein/restic-pg_dump:latest` sidecar to backup your PostgreSQL database.
 
 This Docker image is powered by:
